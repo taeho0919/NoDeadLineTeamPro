@@ -2,5 +2,7 @@ using UnityEngine;
 
 public interface KTH_IInteraction
 {
-    void CheckInteract(bool isInteracting);
+    void OnInteractionEnter();
+    void OnInteractionExit();
+    void Interact();
 }

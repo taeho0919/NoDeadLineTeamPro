@@ -27,6 +27,12 @@ public class KTH_PlayerCTRL : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (KTH_InputLock.instance.IsLocked)
+        {
+            mover.Move(Vector2.zero);
+            return;
+        }
+
         mover.Move(curMoveInput);
     }
 }
